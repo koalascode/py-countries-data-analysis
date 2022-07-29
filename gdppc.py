@@ -34,8 +34,8 @@ plt.plot(yearsOne, populationOne, marker='o', ls='--', color='g', label=df.iloc[
 plt.plot(yearsTwo, populationTwo,  marker='d', ls='-', color='r', label=df.iloc[countryTwo]["Country Name"])
 
 plt.xlabel('Year')
-plt.ylabel('GDP (Current $)')
-plt.title('Year vs Population')
+plt.ylabel('GDP Per Capita (Current $)')
+plt.title('Year vs GDP Per Capita')
 plt.legend(loc='lower right')
 
 fig

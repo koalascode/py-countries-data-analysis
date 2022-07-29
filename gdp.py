@@ -35,7 +35,7 @@ plt.plot(yearsTwo, populationTwo,  marker='d', ls='-', color='r', label=df.iloc[
 
 plt.xlabel('Year')
 plt.ylabel('GDP (Current $)')
-plt.title('Year vs Population')
+plt.title('Year vs GDP')
 plt.legend(loc='lower right')
 
 fig
