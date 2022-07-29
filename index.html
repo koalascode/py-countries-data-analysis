@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+        - pandas
+        - matplotlib
+        - paths: 
+            - ./populationwithworld.csv
+            - ./populationsmain.csv
+            - ./styles.css
+            - ./graph.py
+            - ./main.py
+            - ./chart.py
+    </py-env>
+    <link rel="stylesheet" href="./styles.css"/>
+    <title>Country Data</title>
+</head>
+<body>
+    <div id="intro">
+        <h1 id="sectionheader">Countries Data Analytics</h1>
+        <a href="#pageselection">
+            <p id="downarrow">↓</p>
+        </a>
+    </div>
+    <div id="pageselection">
+        <a href="./population.html">
+            <h2 id="pageselector">Population</h2>
+        </a>
+        <a href="./gdp.html">
+            <h2 id="pageselector">GDP</h2>
+        </a>
+        <a href="./gdppc.html">
+            <h2 id="pageselector">GDP Per Capita</h2>
+            <p>($ Current)</p>
+        </a>
+        <a href="./gdppcppp.html">
+            <h2 id="pageselector">GDP Per Capita PPP</h2>
+            <p>($ Current)</p>
+        </a>
+        <a href="">
+            <h2 id="pageselector">Poverty</h2>
+        </a>
+    </div>
+    
+
+</body>
+</html>
