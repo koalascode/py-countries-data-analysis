@@ -5,12 +5,23 @@ import matplotlib
 import matplotlib.pyplot as plt
 import warnings
 
+import os
+from matplotlib import font_manager as fm
+
+
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 df = pandas.read_csv("./gdppercapitadata.csv",  ",")
 df2 = pandas.read_csv("./gdppercapitapppdata.csv",  ",")
 
 fig, ax = plt.subplots()
+
+fpath = "./Lato-Black.ttf"
+prop = fm.FontProperties(fname = fpath)
+
+fpath2 = "./Lato-Regular.ttf"
+prop2 = fm.FontProperties(fname = fpath2)
+
 
 selectElOne = Element('selectOne').value
 selectElTwo = Element('selectTwo').value 
@@ -42,8 +53,8 @@ if (gdppcCheck == True):
         yearsOne.append(i)
         yearsTwo.append(i)
 
-    plt.plot(yearsOne, populationOne, marker='o', ls='--', color='g', label=df.iloc[countryOne]["Country Name"])
-    plt.plot(yearsTwo, populationTwo,  marker='d', ls='-', color='r', label=df.iloc[countryTwo]["Country Name"])
+    plt.plot(yearsOne, populationOne, marker='.', ls='--', color='g', label=df.iloc[countryOne]["Country Name"])
+    plt.plot(yearsTwo, populationTwo,  marker='.', ls='-', color='r', label=df.iloc[countryTwo]["Country Name"])
 
     plt.xlabel('Year')
     plt.ylabel('$ Current')
@@ -62,10 +73,13 @@ if (gdppcpppCheck == True):
         yearsFour.append(i)
 
 
-    plt.plot(yearsThree, populationThree, marker='o', ls='--', color='y', label=df.iloc[countryOne]["Country Name"] + " PPP")
-    plt.plot(yearsFour, populationFour,  marker='d', ls='-', color='b', label=df.iloc[countryTwo]["Country Name"] + " PPP")
+    plt.plot(yearsThree, populationThree, marker='.', ls='--', color='y', label=df.iloc[countryOne]["Country Name"] + " PPP")
+    plt.plot(yearsFour, populationFour,  marker='.', ls='-', color='b', label=df.iloc[countryTwo]["Country Name"] + " PPP")
     plt.legend(loc='lower right')
 
+ax.set_title("Year vs GDP Per Capita", fontproperties = prop, size=15)
+ax.set_xlabel("Year", fontproperties = prop2, size=12)
+ax.set_ylabel("$ Current", fontproperties = prop2, size=12)
 
 fig
 

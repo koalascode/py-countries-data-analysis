@@ -1,11 +1,22 @@
 import pandas
 import matplotlib
 import matplotlib.pyplot as plt
+import warnings
+
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 
+page = Element('sectionheader').element.innerHTML
 
-df = pandas.read_csv("./populationsmain.csv",  ",")
-df2 = pandas.read_csv("./populationwithworld.csv",  ",")
+if (page == "Population Data"):
+    df = pandas.read_csv("./populationsmain.csv",  ",")
+elif (page == "GDP Data"):
+    df = pandas.read_csv("./gdpdata.csv",  ",")
+elif (page == "GDP Per Capita Data"):
+    df = pandas.read_csv("./gdppercapitadata.csv",  ",")
+elif (page == "GDP Per Capita PPP Data"):
+    df = pandas.read_csv("./gdppercapitapppdata.csv",  ",")
+
 
 selectElThree = Element('selectThree').value 
 yearInput = Element('selectFour').value  

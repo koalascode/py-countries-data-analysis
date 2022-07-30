@@ -19,9 +19,11 @@
             - ./gdpdata.csv
             - ./gdppercapitadata.csv
             - ./gdppercapitapppdata.csv
+            - ./Lato-Regular.ttf
+            - ./Lato-Black.ttf
     </py-env>
     <link rel="stylesheet" href="./styles.css"/>
-    <title>GDP Per Capita Data</title>
+    <title>💳 GDP Per Capita Data</title>
 </head>
 <body>
     <div id="header">
@@ -45,7 +47,7 @@
 
     </div>
     <div id="graph">
-    <py-script id="realgraph" src="./gdppc.py"></py-script>
+    <py-script id="realgraph" src="./main.py"></py-script>
     <div id="graphselections">
         <form>
             <select id="selectOne">
@@ -488,7 +490,7 @@
         <div id="chartmain">
             
         </div>
-        <py-script src="./gdppcchart.py"></py-script>
+        <py-script src="./chart.py"></py-script>
         
         <div id="chartselect">
             <select id="selectThree">
