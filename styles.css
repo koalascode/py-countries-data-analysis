@@ -30,6 +30,7 @@ table {
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
     font-size: 14px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   th {
@@ -80,6 +81,13 @@ table {
     text-align: center;
   }
 
+  #header {
+    font-family: "Inter";
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center; 
+  }
+
   #downarrow {
     text-align: center;
     font-size: 1.3rem;
@@ -114,6 +122,7 @@ table {
   background-color: rgb(29, 29, 29);
   margin: 2rem 0rem;
   padding: 3rem 0rem;
+
 }
 
 #graphselections, #chartselect {
@@ -134,4 +143,23 @@ table {
 
 #datapointselection {
   color: white;
+}
+
+#contentssect {
+  background-color: rgb(212, 218, 230);
+  width: 40%;
+  padding: 1.5rem 1rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+}
+
+#contentsheader {
+  font-family: "Lato";
+  font-size: 1.8rem;
+  padding-left: .5rem;
+}
+
+#contentselector {
+  padding: .5rem;
+  font-size: 1.1rem;
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <script src="./index.js"></script>
     <py-env>
         - pandas
         - matplotlib
@@ -29,26 +30,23 @@
             <p id="downarrow">↓</p>
         </a>
     </div>
-    <div id="pageselection">
-        <a href="./population.html">
-            <h2 id="pageselector">Population</h2>
-        </a>
-        <a href="./gdp.html">
-            <h2 id="pageselector">GDP</h2>
-        </a>
-        <a href="./gdppc.html">
-            <h2 id="pageselector">GDP Per Capita</h2>
-            <p>($ Current)</p>
-        </a>
-        <a href="./gdppcppp.html">
-            <h2 id="pageselector">GDP Per Capita PPP</h2>
-            <p>($ Current)</p>
-        </a>
-        <a href="./combineddata.html">
-            <h2 id="pageselector">All Combined</h2>
-        </a>
+    <div id="contentssect">
+       <h2 id="contentsheader">CONTENTS:</h2>
+       <a href="./population.html">
+        <p id="contentselector">👨‍👩‍👧‍👦 Population</p>
+    </a>
+    <a href="./gdp.html">
+        <p id="contentselector">💰 GDP</p>
+    </a>
+    <a href="./gdppc.html">
+        <p id="contentselector">💳 GDP Per Capita ($ Current)</p>
+    </a>
+    <a href="./gdppcppp.html">
+        <p id="contentselector">💸 GDP Per Capita PPP ($ Current)</p>
+    </a>
+    <a href="./combineddata.html">
+        <p id="contentselector">🕶 All Combined</p>
+    </a> 
     </div>
-    
-
 </body>
 </html>
