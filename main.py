@@ -4,7 +4,7 @@ import pandas
 import matplotlib
 import matplotlib.pyplot as plt
 import warnings
-
+from pyodide import create_proxy
 from matplotlib import font_manager as fm
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
@@ -74,7 +74,6 @@ elif (page == "GDP Per Capita PPP Data"):
 ax.set_title(title, fontproperties = prop, size=15)
 ax.set_xlabel(xlabel, fontproperties = prop2, size=12)
 ax.set_ylabel(ylabel, fontproperties = prop2, size=12)
-
 fig
 
 

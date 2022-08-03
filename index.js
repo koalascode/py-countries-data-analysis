@@ -1,20 +1,23 @@
-function loadHtml(id, fileName) {
-    console.log(`div id: ${id}, filename: ${fileName}`)
+function handleAll() {
+    selectThree = document.getElementById("selectThree")
+    selectFour = document.getElementById("selectFour")
+    selectFive = document.getElementById("selectFive")
+    amountInput = document.getElementById("amountinput")
 
-    let xhttp;
-    let element = document.getElementById(id)
-    let file = fileName;
+    console.log(selectThree.value)
 
-    if (file) {
-        xhttp = new XMLHttpRequest()
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4) {
-                if (this.status == 200) {element.innerHTML = this.responseText}
-                if (this.status == 404) {element.innerHTML = "<h1>Page not found</h1>"}
-            }
-        }
-        xhttp.open("GET", `./${file}`, true);
-        xhttp.send()
-        return;
+    if (selectThree.value === '0') {
+        selectFive.style.display = "none"
+        console.log("Select 3 Value is 0")
     }
+
+    if (selectThree.value === '4' || selectThree.value === '5') {
+        amountInput.style.display = "block"
+        console.log("Select 3 Value is 4 or 5")
+    } else {
+        amountInput.style.display = "none"
+    }
+
+    console.log(" THE FUNCTION IS WORKING CORRECTLY!! I REPEAT, THE FUNCTION IS WORKING CORRECTLY! ")
 }
+
